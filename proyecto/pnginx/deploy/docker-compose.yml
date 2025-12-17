@@ -8,7 +8,7 @@ services:
       - "${PORT_WEB}:80"     
     env_file:
       - ./.env
-    image: diego/nginx
+    image: ${IMAGEN}/nginx
     volumes:
       - ../../pproyecto/dist:/var/www/html
       - ./logs:/root/logs      
