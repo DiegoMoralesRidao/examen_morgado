@@ -1,0 +1,24 @@
+services:
+  web:
+    build:
+      context: ${CONTEXTO}
+      dockerfile: ./dockerfiles/ubbase/dockerfile
+    container_name: ${CONTAINER_NAME}
+    image: ${FIRMA}/ubbase
+    ports:
+      - ${PORT_SSH}:80
+    env_file:
+      - ./.env
+    volumes:
+      - ./logs:/root/logs 
+    networks:
+      netproyecto_web:
+        ipv4_address: ${IP_WEB}
+networks:
+  netproyecto_web:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
+entrypoint: ["${INICIALES}./start.sh"]
