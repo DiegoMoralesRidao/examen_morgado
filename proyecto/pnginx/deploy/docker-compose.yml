@@ -3,7 +3,7 @@ services:
     build:
       context: ${CONTEXTO}
       dockerfile: ./dockerfiles/nginx/dockerfile
-    container_name: ${NOMBRE}
+    container_name: ${CONTENEDOR}
     ports:
       - "${PORT_WEB}:80"     
     env_file:
