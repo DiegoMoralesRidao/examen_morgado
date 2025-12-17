@@ -1,0 +1,24 @@
+services:
+  web:
+    build:
+      context: ${CONTEXTO}
+      dockerfile: ./dockerfiles/nginx/dockerfile
+    container_name: ${NOMBRE}
+    ports:
+      - "${PORT_WEB}:80"     
+    env_file:
+      - ./.env
+    image: diego/nginx
+    volumes:
+      - ../../pproyecto/dist:/var/www/html
+      - ./logs:/root/logs      
+    networks:
+      netnginx:
+        ipv4_address: ${IP}
+networks:
+  netnginx:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
