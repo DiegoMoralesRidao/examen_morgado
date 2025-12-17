@@ -2,13 +2,13 @@ services:
   web:
     build:
       context: ${CONTEXTO}
-      dockerfile: ./dockerfiles/pspotify/dockerfile
+      dockerfile: ./dockerfiles/node/dockerfile
     container_name: ${CONTENEDOR}
     ports:
       - "${PORT_WEB}:80"    
     env_file:
       - ./.env
-    image: ${IMAGEN}/spotify
+    image: ${IMAGEN}/node
     volumes:
       - ./logs:/root/logs      
     networks:
