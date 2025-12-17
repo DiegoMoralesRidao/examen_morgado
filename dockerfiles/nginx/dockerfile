@@ -1,3 +1,4 @@
+ARG IMAGEN
 FROM ${IMAGEN}/ubbase
 
 USER root
