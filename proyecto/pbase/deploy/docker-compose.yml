@@ -21,4 +21,4 @@ networks:
       driver: default
       config:
         - subnet: ${SUBNET}
-entrypoint: ["${INICIALES}./start.sh"]
+entrypoint: ["./${FIRMA}start.sh"]
