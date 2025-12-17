@@ -3,7 +3,7 @@ services:
     build:
       context: ${CONTEXTO}
       dockerfile: ./dockerfiles/pspotify/dockerfile
-    container_name: ${CONTENEDOR
+    container_name: ${CONTENEDOR}
     ports:
       - "${PORT_WEB}:80"    
     env_file:
