@@ -7,10 +7,10 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /root/admin/node
-RUN mkdir -p /root/admin/node/proyecto/autocaraveando
+RUN mkdir -p /root/admin/autocaraveando
+RUN mkdir -p /root/admin/autocaraveando/proyecto/autocaraveando
 WORKDIR /root/admin/autocaraveando
-COPY ./proyecto/autocaraveando /root/admin/node/proyecto/autocaraveando
+COPY ./proyecto/autocaraveando /root/admin/autocaraveando/proyecto/autocaraveando
 
 COPY ./dockerfiles/node/admin/start.sh .
 RUN chmod +x /root/admin/node/start.sh
