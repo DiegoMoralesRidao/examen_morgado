@@ -14,6 +14,6 @@ RUN mkdir -p /root/admin/ubbase
 WORKDIR /root/admin/ubbase
 COPY  ./dockerfiles/ubbase/admin/ .
 COPY ./common/id_rsa.pub /root/admin/ubbase/common/id_rsa.pub
-RUN chmod +x ./{FIRMA}start.sh
+RUN chmod +x ./${FIRMA}start.sh
 
 ENTRYPOINT [ "./${FIRMA}start.sh" ]
