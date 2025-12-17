@@ -1,4 +1,4 @@
-FROM diego/ubsecurity
+FROM ${IMAGEN}/ubbase
 
 USER root
 RUN apt update && apt install -yq --no-install-recommends \
