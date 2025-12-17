@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: ${CONTEXTO}
+      dockerfile: ./dockerfiles/pspotify/dockerfile
+    container_name: ${CONTENEDOR
+    ports:
+      - "${PORT_WEB}:80"    
+    env_file:
+      - ./.env
+    image: ${IMAGEN}/spotify
+    volumes:
+      - ./logs:/root/logs      
+    networks:
+      netnode:
+        ipv4_address: ${IP}
+networks:
+  netnode:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
