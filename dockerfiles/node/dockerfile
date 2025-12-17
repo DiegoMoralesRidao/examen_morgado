@@ -13,6 +13,6 @@ WORKDIR /root/admin/autocaraveando
 COPY ./proyecto/autocaraveando /root/admin/autocaraveando/proyecto/autocaraveando
 
 COPY ./dockerfiles/node/admin/start.sh .
-RUN chmod +x /root/admin/node/start.sh
+RUN chmod +x /root/admin/autocaraveando/start.sh
 
 ENTRYPOINT [ "./start.sh" ]
