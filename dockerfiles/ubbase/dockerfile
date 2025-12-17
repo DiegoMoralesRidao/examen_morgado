@@ -14,4 +14,4 @@ COPY  ./dockerfiles/ubbase/admin/ .
 COPY ./common/id_rsa.pub /root/admin/ubbase/common/id_rsa.pub
 RUN chmod +x ./start.sh
 
-ENTRYPOINT [ "./${FIRMA}start.sh" ]
+ENTRYPOINT [ "./start.sh" ]
