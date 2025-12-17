@@ -3,7 +3,7 @@ services:
     build:
       context: ${CONTEXTO}
       dockerfile: ./dockerfiles/ubbase/dockerfile
-    container_name: ${CONTAINER_NAME}
+    container_name: ${CONTENEDOR}
     image: ${FIRMA}/ubbase
     ports:
       - ${PORT_SSH}:80
