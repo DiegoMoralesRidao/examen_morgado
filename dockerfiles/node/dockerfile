@@ -10,7 +10,7 @@ RUN apt-get update && \
 RUN mkdir -p /root/admin/node
 RUN mkdir -p /root/admin/node/proyecto/pproyecto
 WORKDIR /root/admin/node
-COPY ./proyecto/pproyecto /root/admin/node/proyecto/pproyecto
+COPY ./proyecto/node /root/admin/node/proyecto/node
 
 COPY ./dockerfiles/node/admin/start.sh .
 RUN chmod +x /root/admin/node/start.sh
