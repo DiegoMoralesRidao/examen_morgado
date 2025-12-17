@@ -10,7 +10,7 @@ RUN apt-get update && \
 RUN mkdir -p /root/admin/autocaraveando
 RUN mkdir -p /root/admin/autocaraveando/proyecto/autocaraveando/src/Autocaravaneando
 WORKDIR /root/admin/autocaraveando/src/Autocaravaneando
-COPY .\autocaraveando\src\Autocaravaneando /root/admin/autocaraveando/proyecto/autocaraveando
+COPY ./autocaraveando\src\Autocaravaneando /root/admin/autocaraveando/proyecto/autocaraveando
 
 COPY ./dockerfiles/node/admin/start.sh .
 RUN chmod +x /root/admin/autocaraveando/start.sh
